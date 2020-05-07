@@ -10,8 +10,14 @@ import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import { Grid } from '@material-ui/core'
 
+import moment from 'moment';
+
 import CardHeader from '@material-ui/core/CardHeader';
 
+var now = moment().format();
+
+
+var currentDate = moment().format("DD/MM/YYYY");
 
 
 const Header = () => (
@@ -24,10 +30,12 @@ const Header = () => (
                 <Typography variant="h5">INSERIR VENDAS</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
-                <Typography variant="h5">04/05/2020</Typography>
+                <Typography variant="h5">{currentDate}</Typography>
             </Grid>
             <Grid item xs={6} sm={3}>
                 <Typography variant="h5"></Typography>
+
+                
             </Grid>
         </Grid>
 
